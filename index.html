@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janzen Faidiban</title>
+    <title>Registration Education Expo </title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -24,6 +24,9 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+
+ <!-- SWEETALERT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </head>
 
@@ -66,47 +69,73 @@
     </div>
     <!-- End Hero -->
 
-    <!-- Card Section -->
-    <div class="max-w-[50rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Card registrasion -->
+    <div id="registration" class="max-w-[50rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+
+            <div class="mb-9">
+                <h1 class="mb-4 text-center text-6xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white mb-6">
+                    <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Registration</span> Form</h1>
+
+                <div class="">
+                    <p class="hidden mb-6 text-xl text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, doloribus?</p>
+                        <div class="mb-6">
+                            <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Full Name</label>
+                            <input required type="text" placeholder="your full name" id="fullName" fullName="fullName" class="rounded-lg py-4 px-6 w-full text-2xl shadow-lg">
+                        </div>
+                        <!-- item end -->
+                        
+                        <div class="mb-6">
+                            <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Email Address</label>
+                            <input required type="text" placeholder="your email address" id="email_address" name="email_address"  class="rounded-lg py-4 px-6 w-full text-2xl shadow-lg">
+                        </div>
+                        <!-- item end -->
+
+                        <div class="mb-6">
+                            <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Phone Number / Whatsapp</label>
+                            <input required type="text" placeholder="youu phone number" id="wa" name="wa"  class="rounded-lg py-4 px-6 w-full text-2xl shadow-lg">
+                        </div>
+                        <!-- item end -->
+
+                        <div class="mt-9">
+                            <button type="submit" class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-2xl font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800 w-full py-4 px-6" onclick="konfirmasi()">
+                                <i class="fa-solid fa-paper-plane"></i> Save
+                            </button>
+                        </div>
+                        
+                </div>
+            </div>
+    </div>
+    <!-- End Card registrasion -->
+
+
+       <!-- Card confirmation -->
+       <div id="confirmation" class="max-w-[50rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto hidden">
 
 
         <div class="mb-9">
             <h1 class="mb-4 text-center text-6xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white mb-6">
                 <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Registration</span> Form</h1>
 
-            <div class="">
-                <p class="hidden mb-6 text-xl text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, doloribus?</p>
-                <form action="confirmation.html" class="">
-                    <div class="mb-6">
-                        <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Full Name</label>
-                        <input type="text" placeholder="your full name" class="rounded-lg py-4 px-6 w-full text-2xl shadow-lg">
-                    </div>
-                    <!-- item end -->
-                    
-                    <div class="mb-6">
-                        <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Email Address</label>
-                        <input type="text" placeholder="your email address" class="rounded-lg py-4 px-6 w-full text-2xl shadow-lg">
-                    </div>
-                    <!-- item end -->
-
-                    <div class="mb-6">
-                        <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Phone Number / Whatsapp</label>
-                        <input type="text" placeholder="youu phone number" class="rounded-lg py-4 px-6 w-full text-2xl shadow-lg">
-                    </div>
-                    <!-- item end -->
-
-                    <div class="mt-9">
-                        <button class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-2xl font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800 w-full py-4 px-6">
-                            <i class="fa-solid fa-paper-plane"></i> Save
-                        </button>
-                    </div>
-                    
-                </form>
+            <div class="" id="pendaftar">
+               
             </div>
 
         </div>
     </div>
-    <!-- End Card Section -->
+    <!-- End Card confirmation -->
+
+        <!-- Card Section Success -->
+        <div id="success" class="max-w-[50rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto hidden">
+            <div class="mb-9 text-center">
+                <h1 class="mb-4 text-6xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white mb-6">
+                    <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Success!</span></h1>
+                <div class="">
+                    <p class="mb-6 text-xl text-gray-600 dark:text-gray-200">Welcome to Education Expo by SAGU Foundation</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Card Section Success -->
+    
 
     <!-- Footer Start -->
     <div class="text-center py-9 text-gray-600 dark:text-gray-200">
@@ -116,10 +145,14 @@
 
 
 
-    <script src="./project.js"></script>
+    <!-- <script src="./project.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+  integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -162,6 +195,85 @@
             }
 
         });
+
+
+        // Halaman
+            let registration = document.getElementById("registration");
+            let confirmation = document.getElementById("confirmation");
+            let berhasil = document.getElementById("success");
+      
+
+        function konfirmasi() {
+            let fullName = $("#fullName").val();
+            let email = $("#email_address").val();
+            let wa = $("#wa").val();
+            if(fullName && email && wa)
+            {
+                registration.classList.add("hidden");
+                confirmation.classList.remove("hidden");
+                document.getElementById("pendaftar").innerHTML = `
+                <p class="hidden mb-6 text-xl text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, doloribus?</p>
+                    <div class="mb-6">
+                        <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Full Name</label>
+                        <input type="text" placeholder="your full name" class="rounded-lg pb-4 w-full text-2xl border-none p-0 bg-transparent dark:text-gray-200" id="fullName" value="${fullName}">
+                    </div>
+                    <!-- item end -->
+                    
+                    <div class="mb-6">
+                        <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Email Address</label>
+                        <input type="text" placeholder="your full name" class="rounded-lg pb-4 w-full text-2xl border-none p-0 bg-transparent dark:text-gray-200" id="email_address" value="${email}">
+                    </div>
+                    <!-- item end -->
+
+                    <div class="mb-6">
+                        <label for="" class="block text-xl mb-2 font-bold text-gray-600 dark:text-gray-200">Phone Number / Whatsapp</label>
+                        <input type="text" placeholder="your full name" class="rounded-lg pb-4 w-full text-2xl border-none p-0 bg-transparent dark:text-gray-200" id="" value="${wa}">
+                    </div>
+                    <!-- item end -->
+
+                    <div class="mt-9">
+                        <button class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-2xl font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800 w-full py-4 px-6" onclick="sukses()">
+                            <i class="fa-solid fa-paper-plane"></i> Send
+                        </button>
+                    </div>
+                
+                `;
+               
+            }else{
+                Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'error',
+                    text: 'Harap isi data dengan benar!!',
+                    showConfirmButton: true,
+                    timer: 1000
+                });
+            }
+        }
+
+            function sukses() {
+                    registration.classList.add("hidden");
+                    confirmation.classList.add("hidden");
+                    berhasil.classList.remove("hidden");
+                    let fullName = $("#fullName").val();
+                    let email = $("#email_address").val();
+                    let wa = $("#wa").val();
+
+                if (fullName && email && wa) {
+                var script_url = "https://script.google.com/macros/s/AKfycbyIVXfQiFj9MQS59wGc3CWEpjkROOOaKNZUL_vqlCC4XUgyJcz_Wuks_K1pFNcoO9KO/exec";
+                let url = script_url + "?callback=ctrlq&fullname=" + fullName + "&email=" + email + "&wa=" + wa + "&action=insert";
+                    $("input[type='text']").val("");
+                    var request = jQuery.ajax({
+                        crossDomain: true,
+                        url: url,
+                        method: "GET",
+                        dataType: "jsonp"
+                    });
+
+
+               
+                } 
+            }
+       
+
     </script>
 
 </body>
