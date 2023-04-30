@@ -1,4 +1,4 @@
 # online-registration
 
 ## Demo GitHub Action
-https://sacode-community.github.io/online-registration/
+https://sagufoundation.github.io/registration/
